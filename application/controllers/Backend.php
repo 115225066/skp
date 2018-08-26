@@ -16,6 +16,7 @@ class backend extends CI_Controller {
 		$this->load->model('Mpalru');
 		$this->load->model('Mperilaku');
 		$this->load->model('Mlembaga');
+		$this->load->model('Mdashboard');
 
 	}
 
@@ -23,8 +24,10 @@ class backend extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Dashboard';
-		$data['page'] = 'backend/dashboard/index';
+		$data['title'] 	= 'Dashboard';
+		$data['page'] 	= 'backend/dashboard/index';
+		$data['data'] 	= $this->Mdashboard->view()->result();
+		$data['jumlah'] = $this->Mdashboard->get_data('tbl_pegawai');
 		$this->load->view('backend/index', $data);
 	}
 

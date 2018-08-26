@@ -108,7 +108,7 @@
                             <div class="col-sm-8">
                             <select class="form-control" name="status_pegawai">
                                 <option value="PNS" <?php if($r->status_pegawai == "PNS"){ echo "selected";} ?>>PNS</option>
-                                <option value="NOS PNS" <?php if($r->status_pegawai == "NON PNS"){ echo "selected";} ?>>NON PNS</option>
+                                <option value="NON PNS" <?php if($r->status_pegawai == "NON PNS"){ echo "selected";} ?>>NON PNS</option>
                                 </select>
                             </div>
                             <span class="help-block"></span>
